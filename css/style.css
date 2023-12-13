@@ -93,7 +93,7 @@ section{
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url(../img/background.png);
+    background-image: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url(../img/tari-kecak.png);
     background-size: cover;
     background-position: bottom center;
     display: flex;
@@ -182,17 +182,19 @@ header.sticky{
     cursor: pointer;
 }
 .holiday {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-align-items: center;
-gap: 9rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+    position: relative;
 }
 
-.holiday-img img{
+.holiday-img img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-
+    opacity: 0; /* Atur opasitas awal menjadi 0 */
+    transition: opacity 1s ease-in-out; /* Animasi opasitas */
 }
 .holiday-text h5{
     font-size: 22px;
@@ -215,6 +217,14 @@ gap: 9rem;
     color: #ffffffab;
     margin-bottom: 35px
 }
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%); /* Posisi awal di luar layar kiri */
+    }
+    100% {
+      transform: translateX(0%); /* Posisi akhir, masuk ke dalam layar */
+    }
+  }
 .center-text{
     text-align: center;
 }
@@ -270,14 +280,17 @@ gap: 9rem;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 9rem;
-    }
-    
-    .Culture-img img{
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    
-    }
+    position: relative;
+}
+
+.Culture-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transform: translateX(-100%); /* Posisi awal di luar layar kiri */
+    opacity: 0; /* Atur opasitas awal menjadi 0 */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Animasi transformasi dan opasitas */
+}
     .Culture-text h5{
         font-size: 22px;
         font-weight: 600;
