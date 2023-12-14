@@ -187,6 +187,8 @@ header.sticky{
     align-items: center;
     gap: 9rem;
     position: relative;
+    background-image: url('/img/Group 31.png');
+    background-repeat: no-repeat; /* Untuk menghindari pengulangan gambar */
 }
 
 .holiday-img img {
@@ -232,6 +234,10 @@ header.sticky{
     font-size: var(--h2-font);
     font-weight: 800;
 }
+.tour {
+    background-image: url(/img/ellipse.png);
+    background-repeat: repeat-x;
+}
 .tour-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
@@ -275,21 +281,34 @@ header.sticky{
     text-align: center;
     margin-top: 4rem;
 }
+/* CSS untuk elemen .Culture-img */
+.Culture-img {
+    opacity: 0; /* Mulai dengan opacity 0 (tidak terlihat) */
+    transform: translateY(20px); /* Geser elemen ke bawah 20px */
+    transition: opacity 1s ease, transform 0.5s ease; /* Tambahkan transisi */
+}
+
+/* Saat elemen .Culture-img mendekati tampilan, animasikan munculnya */
+.Culture.in-viewport .Culture-img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .Culture {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 9rem;
     position: relative;
+    background-image: url('/img/Group 32.png');
+    background-repeat: no-repeat; /* Untuk menghindari pengulangan gambar */
+    background-position: top right; /* Posisi latar belakang di pojok kanan atas */
 }
 
 .Culture-img img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transform: translateX(-100%); /* Posisi awal di luar layar kiri */
-    opacity: 0; /* Atur opasitas awal menjadi 0 */
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Animasi transformasi dan opasitas */
 }
     .Culture-text h5{
         font-size: 22px;
@@ -340,10 +359,13 @@ header.sticky{
         color: var(--text-color);
         border-radius: 5px;
     }
-.footer{
+    .footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 2rem;
+    background-image: url(/img/Group\ 34.png);
+    background-repeat: no-repeat; /* Untuk menghindari pengulangan gambar */
+    background-position: center bottom; /* Atur posisi latar belakang ke tengah vertikal dan bawah */
 }
 .footer-box{
     display: flex;
