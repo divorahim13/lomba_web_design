@@ -12,12 +12,12 @@
 :root{
     --text-color: #fff;
     --bg-color: #000;
-    --main-color: #ffa343;
+    --main-color: #eed202;
 
     --h1-font: 6rem;
     --h2-font: 3rem;
     --p-font: 1rem;
-}
+}   
 body{
     color: var(--text-color);
     background: var(--bg-color);
@@ -463,7 +463,7 @@ header.sticky{
         right: 0;
         display: flex;
         flex-direction: column;
-        background: var(--bg-color);
+        background: #000000db;
         transition: all .50s ease;
     }
     .navbar a{
