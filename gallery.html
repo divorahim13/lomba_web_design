@@ -1,0 +1,117 @@
+<html>
+<head>
+  <title>CSS Gallery</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
+  <link rel="stylesheet" href="/css/gallery.css">
+</head>
+<body>
+  <p class="heading">CSS Gallery</p>
+  <div class="gallery-image">
+    <div class="img-box">
+      <img src="https://picsum.photos/350/250?image=444" alt="" class="reveal-image"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Library</p>
+          <p class="opacity-low">Architect Design</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="https://picsum.photos/350/250/?image=232" alt="" class="reveal-image"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Night Sky</p>
+          <p class="opacity-low">Cinematic</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="https://picsum.photos/350/250/?image=431" alt="" class="reveal-image"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Tea Talk</p>
+          <p class="opacity-low">Composite</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="https://picsum.photos/350/250?image=474" alt="" class="reveal-image"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Road</p>
+          <p class="opacity-low">Landscape</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="https://picsum.photos/350/250?image=344" alt="" class="reveal-image"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Sea</p>
+          <p class="opacity-low">Cityscape</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="https://picsum.photos/350/250?image=494" alt="" class="reveal-image"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Vintage</p>
+          <p class="opacity-low">Cinematic</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+        <img src="https://picsum.photos/350/250?image=494" alt="" class="reveal-image"/>
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Vintage</p>
+            <p class="opacity-low">Cinematic</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="https://picsum.photos/350/250?image=494" alt="" class="reveal-image"/>
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Vintage</p>
+            <p class="opacity-low">Cinematic</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="https://picsum.photos/350/250?image=494" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Vintage</p>
+            <p class="opacity-low">Cinematic</p>
+          </div>
+        </div> 
+      </div>
+  </div>
+  <script>
+     // Mendapatkan semua elemen gambar dengan class "reveal-image"
+  const revealImages = document.querySelectorAll('.reveal-image');
+
+// Fungsi untuk memeriksa apakah elemen masuk dalam tampilan saat digulir
+function checkScroll() {
+  revealImages.forEach((image) => {
+    const imageTop = image.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (imageTop < windowHeight) {
+      // Jika elemen masuk dalam tampilan, terapkan efek
+      image.style.opacity = '1';
+      image.style.transform = 'translateY(0)';
+    }
+  });
+}
+
+// Tambahkan event listener untuk mendeteksi saat digulir
+window.addEventListener('scroll', checkScroll);
+
+// Panggil fungsi checkScroll untuk memeriksa elemen saat halaman pertama kali dimuat
+checkScroll();
+  </script>
+</body>
+</html>
